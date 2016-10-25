@@ -1,0 +1,128 @@
+<!doctype html>
+ <html class="no-js" lang="" ng-app="app"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>COBRANZA</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../css/bootstrap.min.css">
+        <link rel="stylesheet" href="../css/main.css?id=1">
+        <link rel="stylesheet" href="../css/animate.css">
+        <link rel="stylesheet" href="../css/notiny.min.css">
+        <link rel="stylesheet" href="../css/rome.css">
+        <link rel="stylesheet" href="../css/monitoreo.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+        <script src="../js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    </head>
+    <body ng-controller="monitoreoCtrl">
+    
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                  <a ng-cloak ng-show="angularLoaded"  class="navbar-brand animacion" href="#"><span><img src="../img/logo-siaisa.png" width="35" height="35"/></span> {{agente.nombre_completo}}</a>
+              </div>
+       
+              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="logout.php">CERRAR SESIÓN</a></li>
+                </ul> 
+                <ul class="nav navbar-nav navbar-right hidden">
+                    <li><a data-toggle="modal" data-target="#modalReporte" id="contactacion"></a></li>
+                </ul> 
+                   <ul class="nav navbar-nav navbar-right">
+                       <li><a href="../menu/">REGRESAR</a>
+                    </li>
+                </ul>
+           
+              </div>
+            </div>
+   </nav>
+    <div class="container-fluid">   
+        
+      <div class="centro-loader" ng-hide="angularLoaded">
+          <img src="../img/rolling.svg" alt="loader"/>
+       </div>
+    
+       
+        <div ng-cloak ng-show="angularLoaded" class="row animacion-loaded" style="margin-top: 70px">            
+                
+             <div class="col-md-6">
+                 <h2>Monitoreo de llamadas</h2>
+                 <div class="col-md-4 no-padding hidden-xs">
+                     <input id='inputInicio' placeholder="Fecha inicio" class='input form-control'  />       
+                 </div>
+                 <div class="col-md-4 no-padding hidden-xs">
+                      <input id='inputFin' placeholder="Fecha fin" class='input form-control'  />      
+                 </div>
+                 <div class="col-md-4 no-padding hidden-xs">
+                     <a class="btn btn-danger btn-block" ng-click="onFiltrar()">{{filtrarText}}</a>   
+                 </div>
+                 <table style="margin-top: 100px" id="tablaReporte" class=" table table-responsive table-striped table-bordered">
+                      <thead>
+                          <tr>
+                              <th>N°</th>
+                              <th>Agente</th>
+                              <th>Llamadas</th>
+                              <th>Contactos</th>
+                              <th>Citas</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr ng-repeat="agente in list_monitoreo">
+                            <td>{{$index+1}}</td>
+                            <td>{{agente.nombre|uppercase}}</td>
+                            <td>{{agente.total_contactados}}</td>
+                            <td>{{agente.contactados}}</td>   
+                            <td>{{agente.citas}}</td>
+                         </tr>
+                         <tr>
+                            <td></td>
+                            <td></td>
+                            <td>Total:<strong>{{total_llamadas}}</strong></td>
+                            <td>Total:<strong>{{total_contactados}}</strong> </td> 
+                            <td>Total:<strong>{{total_citas}}</strong></td>
+                        </tr>
+                      </tbody>
+                  </table>
+                 
+                 <a class="btn btn-primary" ng-click="descargar()">Descargar reporte</a>
+                 
+              </div>
+            
+            <div class="col-md-6">
+                
+                <h2>
+                    Avances de encuesta
+                </h2>
+                <canvas style="margin-top: 100px"  id="bar"  class="chart chart-bar animacion"
+                                    chart-data="data" chart-labels="labels" chart-series="series">
+                   </canvas> 
+            </div>
+       
+       </div>
+        
+    </div>
+        <script src="../js/vendor/wow.min.js"></script>
+        <script src="../js/vendor/jquery-1.11.2.js"></script>
+        <script src="../js/jquery.tabletoCSV.js"></script>
+        <script src="../js/vendor/bootstrap.min.js"></script>
+        <script src="../js/vendor/rome.js"></script>
+       <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+       <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.min.js"></script>
+       <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-aria.min.js"></script>
+       <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-messages.min.js"></script>
+       <script src="https://jtblin.github.io/angular-chart.js/node_modules/chart.js/dist/Chart.min.js"></script>
+       <script src="http://cdn.jsdelivr.net/angular.chartjs/latest/angular-chart.min.js"></script>
+       <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-1.3.3.js"></script>
+       <script src="../js/vendor/angular-smooth-scroll.js"></script>
+       <script src="../js/angular/app.js?id=2.5"></script>
+       <script src="../js/angular/controladores/monitoreoCtrl.js?id=1.7"></script>
+    </body>
+</html>

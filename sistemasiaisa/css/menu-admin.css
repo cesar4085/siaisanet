@@ -1,0 +1,79 @@
+.chart-legend li span{
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin-right: 5px;
+}
+.blanco{
+     color: white;
+     margin-left:15px;
+}
+.wrap {
+    position: relative;
+}
+.panel ul {
+    border-top: 2px solid #34495D;
+}
+
+.menu-link {
+  position: absolute;
+  font-size: 1.5em;
+}
+
+.menu-link:link,
+.menu-link:visited {
+  color: #fff;
+  border-radius: 4px;
+  padding: .2em .4em;
+}
+
+.menu-link:hover,
+.menu-link:active {
+  color: #25B89A;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 1.125em;
+  margin: .5em 0;
+}
+
+
+/*
+Nav Panel
+======================================
+*/
+
+.panel {
+  background:#262368;
+  z-index: 9999;
+  position: fixed;
+  left: -15.625em; /*or width of your navigation panel*/
+  width: 15.625em; /*should match the above value*/
+}
+
+.panel ul {
+  border-top: 2px solid #34495D;
+}
+
+.panel a {
+  display: block;
+  border-bottom: 2px solid #34495D;
+  padding: 1em;
+}
+
+.panel a:link,
+.panel a:visited {
+  color: #fff;
+}
+
+.panel a:hover,
+.panel a:active {
+  background: #25B89A;
+}
+
+.nav-icon {
+  margin-right: 6px;
+}
+
+

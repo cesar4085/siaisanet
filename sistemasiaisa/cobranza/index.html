@@ -1,0 +1,586 @@
+<!doctype html>
+<html class="no-js" lang="" ng-app="app">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>COBRANZA</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css?id=1">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/notiny.min.css">
+    <link rel="stylesheet" href="css/responsive-tabs.css">
+    <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+</head>
+
+<body ng-controller="controlador">
+    <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    <!-- MODAL REPORTE -->
+    <div class="modal fade" id="modalReporte" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Registro guardado</h4>
+                </div>
+                <div class="modal-body">
+                    <h3 class="md-subhead">HAS CONTACTADO A <span class="rojo">{{contactacion._contactados}}</span> DE <span class="rojo">{{contactacion._total_contactados}}</span></h3>
+                    <h3 class="md-subhead">TU PORCENTAJE DE CONTACTACIÓN ES DEL <span class="rojo">{{(contactacion._contactados*100)/contactacion._total_contactados|number:1}}%</span> </h3>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:{{(contactacion._contactado*100)/(contactacion._total_contactados)}}%">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" ng-disabled="formRep.$invalid" class="btn btn-red" data-dismiss="modal" ng-click="reloadPage()">SIGUIENTE LLAMADA</button>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a ng-cloak ng-show="angularLoaded" class="navbar-brand animacion" href="#"><span><img src="img/logo-siaisa.png" width="35" height="35"/></span> {{agente.nombre_completo}}</a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="logout.php">CERRAR SESIÓN</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right hidden">
+                    <li>
+                        <a data-toggle="modal" data-target="#modalReporte" id="contactacion"></a>
+                    </li>
+                </ul>
+
+
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a>MANEJO DE OBJECIONES</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a>RUTAS DE SOLUCIÓN</a>
+                    </li>
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="menu.php">REGRESAR</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid">
+
+        <div class="centro-loader" ng-hide="angularLoaded">
+            <img src="img/rolling.svg" alt="loader" />
+        </div>
+
+        <div ng-cloak ng-show="angularLoaded" class="row animacion-loaded principal-row">
+            <div class="col-md-4 col-sm-4 col-xs-4">
+                <h2 class="md-title">Información cliente</h2>
+                <h3 class="md-subhead"><strong>Nombre</strong></h3>
+                <h3 class="md-subhead">{{cliente.nombre}} {{cliente.paterno}} {{cliente.materno}}</h3>
+                <h3 class="md-subhead"><strong>Teléfono casa</strong></h3>
+                <h3 class="md-subhead">{{cliente.telefono_fijo}}</h3>
+                <h3 class="md-subhead"><strong>Teléfono celular</strong></h3>
+                <h3 class="md-subhead">{{cliente.telefono_movil}}</h3>
+            </div>
+            <div class="col-md-8 col-sm-8 col-xs-8">
+                <h3 class="md-title">Información de llamada</h3>
+                <br>
+                <form>
+                    <div class="form-group">
+                        <label>MARCANDO A</label>
+                        <br>
+                        <select ng-model="bitacora.id_tipo_llamada" class="form-control form-control-shadow" ng-change="tipoChange()">
+                            <option value="1">Celular</option>
+                            <option value="2">Casa</option>
+                        </select>
+                    </div>
+                    <br>
+                    <label>ESTATUS LLAMADA </label>
+                    <br>
+                    <select ng-show="bitacora.id_tipo_llamada" ng-model="bitacora.id_status_llamada" class="form-control form-control-shadow animacion" ng-change="statusChange()">
+                        <option ng-value="1">Contestan</option>
+                        <option ng-value="2">No contestan</option>
+                        <option ng-value="3">Teléfono Inválido</option>
+                        <option ng-value="4">Fuera de Servicio</option>
+                        <option ng-value="5">Buzón de Voz</option>
+                    </select>
+
+
+
+                </form>
+            </div>
+        </div>
+        <div class="row contedor-espacio animacion" id="presentacion" ng-show="bitacora.id_status_llamada==1" ng-cloak>
+            <div class="col-md-12">
+                <h2 class="md-title">PRESENTACIÓN</h2>
+                <h3 class="md-subhead">Buenos días, mi nombre es <strong>{{agente.nombre_completo}}</strong> hablo de parte de crédito maestro</h3>
+                <h3 class="md-subhead">¿Con quíen tengo el gusto?</h3>
+                <div class="col-md-12" style="margin-left: -30px;">
+                    <div class="col-md-12" style="margin-left: -10px;">
+                        <form>
+                            <div class="col-md-4 col-sm-4 col-xs-4">
+                                <div class="form-group">
+                                    <input type="text" class="form-control form-control-shadow" placeholder="Nombre" />
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-4 col-xs-4">
+                                <div class="form-group">
+                                    <input type="text" class="form-control form-control-shadow" placeholder="Paterno" />
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 col-sm-4 col-xs-4">
+                                <div class="form-group">
+                                    <input type="text" class="form-control form-control-shadow" placeholder="Materno" />
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="col-md-12">
+                        <h3 class="md-subhead">¿Has contactado a <strong>{{cliente.nombre}} {{cliente.paterno}}  {{cliente.materno}}</strong>?</h3>
+                        <div class="col-md-12">
+                            <label class="radio-inline">
+                                <input type="radio" ng-model="contactoOpcion" name="contacto" ng-click="onContacto()" value="true">SI
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" ng-model="contactoOpcion" name="contacto" ng-click="onContactoNo()" value="false">NO
+                            </label>
+                        </div>
+                    </div>
+                    <div id="motivo_no_contacto" ng-show="contactoOpcion=='false'" class="col-md-12 animacion">
+
+                        <div class="form-group">
+                            <h3 class="md-subhead">Motivo de no contacto</h3>
+                            <select ng-model="bitacora.id_motivo_no_contacto" class="form-control form-control-shadow">
+                                <option value="1">No se encuentra/Recado</option>
+                                <option value="2">No lo conocen</option>
+                                <option value="3">Ya no vive ahí</option>
+                                <option value="4">Falleció</option>
+                                <option value="5">Cliente molesto</option>
+                                <option value="6">Contesta menor de edad</option>
+                                <option value="7">No localizable en horario</option>
+                            </select>
+                        </div>
+                    </div>
+                    <br>
+
+                    <div id="script_credito" ng-show="contactoOpcion='true'" class="col-md-12 animacion">
+                        <h2 class="md-title"><strong>SCRIPT</strong></h2>
+                        <h2 class="md-subhead">Buenos días, mi nombre es <strong>{{agente.nombre_completo}}</strong>  hablamos de SIAISA en represetación de crédito maestro, el motivo de la llamada es para  informarle sobre la situación de su crédito que tiene. El cual hoy día tiene un vencimiento </h2>
+                        <div class="row no-padding">
+                        <div class="col-md-12 col-xs-12 bhoechie-tab-container no-padding">
+                            <div class="col-lg-3 col-md-3 col-sm-2 col-xs-3 bhoechie-tab-menu">
+                              <div class="list-group">
+                                <a href="#" class="list-group-item active text-center">
+                                  <h4 class="glyphicon glyphicon-usd"></h4><br/>Crédito (1)
+                                </a>
+                                <a href="#" class="list-group-item text-center">
+                                  <h4 class="glyphicon glyphicon-usd"></h4><br/>Crédito (2)
+                                </a>
+                                  <a href="#" class="list-group-item text-center">
+                                      <h4 class="glyphicon glyphicon-usd"></h4><br/><span>Promesas({{promesas.length}})</span>
+                                  </a>
+                              </div>
+                            </div>
+                            <div class="col-lg-9 col-md-9 col-sm-10 col-xs-9 bhoechie-tab">
+                                <!-- flight section -->
+                                <div class="bhoechie-tab-content active">
+                                   
+                                      <div class="container-fluid no-padding">
+                                     <div class="col-md-6 col-sm-6 col-xs-12 no-padding">
+                                        <h3 class="md-subhead"><strong>DEPENDENCIA CRÉDITO</strong></h3>
+                                        <h3 class="md-subhead">GOBIERNO(OAXACA)</h3>
+                                        <h3 class="md-subhead"><strong>TOTAL A PAGAR</strong></h3>
+                                        <h3 class="md-subhead">$5,000</h3>
+                                        <h3 class="md-subhead"><strong>DESCUENTO AL MES DE JULIO</strong></h3>
+                                        <h3 class="md-subhead" style="color:red">$600</h3>
+                                    </div>
+                                    <div class="col-md-6 col-sm-6 col-xs-12 no-padding">
+                                        <h3 class="md-subhead"><strong>PROMESA DE PAGO</strong></h3>
+                                        <form ng-submit="agregarPromesa()">
+                                            <div class="col-md-4 col-sm-12 no-padding">
+                                                <div class="form-group">
+                                                    <h5 class="md-subhead visible-md">IMPORTE</h5>
+                                                    <input id="importe" type="text" solo-numeros class="form-control form-control-shadow" ng-model="cliente.importe_negociado" required placeholder="IMPORTE" />
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 col-sm-12 no-padding">
+                                                <div class="form-group">
+                                                    <h5 class="md-subhead visible-md">FECHA</h5>
+                                                    <h3 class="hidden" id="fecha_label">{{fecha_importe| date:'dd/MM/yyyy'}}</h3>
+                                                    <input type="text" ng-focus="isPopupOpen=true" ng-click="isPopupOpen=true" class="form-control " uib-datepicker-popup="dd/MM/yyyy" placeholder="FECHA" required ng-model="fecha_importe" is-open="isPopupOpen" datepicker-options="dateOptions" ng-required="true" close-text="Close" alt-input-formats="altInputFormats" />
+
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-4 col-sm-12 no-padding">
+                                                <div class="form-group">
+                                                    <button type="submit" class="btn btn-primary btn-block btn-circle"><span class="glyphicon glyphicon-plus"></span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>  
+                                  </div> 
+    
+                                </div>
+                                <!-- train section -->
+                                <div class="bhoechie-tab-content">
+                                         <!--ACORDION CON PROMESAS DE PAGO--> 
+                                         <div class="col-md-12 col-sm-12 col-xs-12 no-padding">
+                                        <div class="panel-group" id="accordion_propuesta">
+                                            <div class="panel panel-primary">
+                                                <div class="panel-heading">
+                                                    <h4 class="panel-title">
+                                                 <a data-toggle="collapse" data-parent="#accordion_propuesta" href="#collapse_propuesta">
+                                                 PROMESAS DE PAGO</a>
+                                               </h4>
+                                                </div>
+                                                <div id="collapse_propuesta" class="panel-collapse collapse in">
+                                                    <div class="panel-body">
+                                                        <div class="table-responsive">
+                                                            <table class="table table-hover">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th>Id</th>
+                                                                        <th>Importe</th>
+                                                                        <th>Fecha</th>
+                                                                        <th>Eliminar</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr ng-repeat="p in promesas">
+                                                                        <td>{{$index+1}}</td>
+                                                                        <td>{{p.importe|currency}}</td>
+                                                                        <td>{{p.fecha|date}}</td>
+                                                                        <td>
+                                                                            <a class="btn btn-default btn-circle" ng-click="eliminarPropuesta($index)">
+                                                                                <span class="glyphicon glyphicon-minus"></span>
+                                                                            </a>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                       </div>  
+                                </div>
+
+                                <!-- hotel search -->
+                                <div class="bhoechie-tab-content">
+                                    <center>
+                                      <h1 class="glyphicon glyphicon-home" style="font-size:12em;color:#55518a"></h1>
+                                      <h2 style="margin-top: 0;color:#55518a">Cooming Soon</h2>
+                                      <h3 style="margin-top: 0;color:#55518a">Hotel Directory</h3>
+                                    </center>
+                                </div>
+                                <div class="bhoechie-tab-content">
+                                    <center>
+                                      <h1 class="glyphicon glyphicon-cutlery" style="font-size:12em;color:#55518a"></h1>
+                                      <h2 style="margin-top: 0;color:#55518a">Cooming Soon</h2>
+                                      <h3 style="margin-top: 0;color:#55518a">Restaurant Diirectory</h3>
+                                    </center>
+                                </div>
+                                <div class="bhoechie-tab-content">
+                                    <center>
+                                      <h1 class="glyphicon glyphicon-credit-card" style="font-size:12em;color:#55518a"></h1>
+                                      <h2 style="margin-top: 0;color:#55518a">Cooming Soon</h2>
+                                      <h3 style="margin-top: 0;color:#55518a">Credit Card</h3>
+                                    </center>
+                                </div>
+                            </div>
+                        </div>
+                      
+                        </div>
+                             <!-- <div class="responsive-tabs-container accordion-xs accordion-sm">
+                            <ul class="nav nav-tabs responsive-tabs">
+                                <li class="active"><a href="#tab-credito" data-toggle="tab">Créditos(1)</a>
+                                </li>
+                                <li><a href="#tab-historial" data-toggle="tab">Créditos(2)</a>
+                                </li>
+                            </ul>
+                            <div class="tab-content">
+                                <a href="#tab-credito" data-toggle="tab" class="accordion-link first active">Información crédito</a>
+                                 <div class="tab-pane active" id="tab-credito">                                    
+                                     <div class="container-fluid no-padding">
+                                     <div class="col-md-6 no-padding">
+                                        <h3 class="md-subhead"><strong>DEPENDENCIA CRÉDITO</strong></h3>
+                                        <h3 class="md-subhead">GOBIERNO(OAXACA)</h3>
+                                        <h3 class="md-subhead"><strong>TOTAL A PAGAR</strong></h3>
+                                        <h3 class="md-subhead">$5,000</h3>
+                                        <h3 class="md-subhead"><strong>DESCUENTO AL MES DE JULIO</strong></h3>
+                                        <h3 class="md-subhead" style="color:red">$600</h3>
+                                    </div>
+                                    <div class="col-md-6 col-xs-12 no-padding">
+                                        <h3 class="md-subhead"><strong>PROMESA DE PAGO</strong></h3>
+                                        <form ng-submit="agregarPromesa()">
+                                            <div class="col-md-3 col-xs-4 no-padding">
+                                                <div class="form-group">
+                                                    <h5 class="md-subhead visible-md">IMPORTE</h5>
+                                                    <input id="importe" type="text" solo-numeros class="form-control form-control-shadow" ng-model="cliente.importe_negociado" required placeholder="IMPORTE" />
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 col-xs-4 no-padding">
+                                                <div class="form-group">
+                                                    <h5 class="md-subhead visible-md">FECHA</h5>
+                                                    <h3 class="hidden" id="fecha_label">{{fecha_importe| date:'dd/MM/yyyy'}}</h3>
+                                                    <input type="text" ng-focus="isPopupOpen=true" ng-click="isPopupOpen=true" class="form-control " uib-datepicker-popup="dd/MM/yyyy" placeholder="FECHA" required ng-model="fecha_importe" is-open="isPopupOpen" datepicker-options="dateOptions" ng-required="true" close-text="Close" alt-input-formats="altInputFormats" />
+
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-3 col-xs-4 no-padding">
+                                                <div class="form-group">
+                                                    <button type="submit" class="btn btn-primary btn-block btn-circle"><span class="glyphicon glyphicon-plus"></span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="col-md-6 col-xs-12 no-padding">
+                                        <div class="panel-group" id="accordion_propuesta">
+                                            <div class="panel panel-primary">
+                                                <div class="panel-heading">
+                                                    <h4 class="panel-title">
+                                                 <a data-toggle="collapse" data-parent="#accordion_propuesta" href="#collapse_propuesta">
+                                                 PROMESAS DE PAGO</a>
+                                               </h4>
+                                                </div>
+                                                <div id="collapse_propuesta" class="panel-collapse collapse in">
+                                                    <div class="panel-body">
+                                                        <div class="table-responsive">
+                                                            <table class="table table-hover">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th>Id</th>
+                                                                        <th>Importe</th>
+                                                                        <th>Fecha</th>
+                                                                        <th>Eliminar</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr ng-repeat="p in promesas">
+                                                                        <td>{{$index+1}}</td>
+                                                                        <td>{{p.importe|currency}}</td>
+                                                                        <td>{{p.fecha|date}}</td>
+                                                                        <td>
+                                                                            <a class="btn btn-default btn-circle" ng-click="eliminarPropuesta($index)">
+                                                                                <span class="glyphicon glyphicon-minus"></span>
+                                                                            </a>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                       </div>     
+                                     </div> 
+                                  </div>    
+                                 <a href="#tab-historial" data-toggle="tab" class="accordion-link first">Historial llamadas()</a>
+                                 <div class="tab-pane fade" id="tab-historial">
+                                                <div class="container-fluid no-padding">
+                                     <div class="col-md-6 no-padding">
+                                        <h3 class="md-subhead"><strong>DEPENDENCIA CRÉDITO</strong></h3>
+                                        <h3 class="md-subhead">GOBIERNO(OAXACA)</h3>
+                                        <h3 class="md-subhead"><strong>TOTAL A PAGAR</strong></h3>
+                                        <h3 class="md-subhead">$5,000</h3>
+                                        <h3 class="md-subhead"><strong>DESCUENTO AL MES DE JULIO</strong></h3>
+                                        <h3 class="md-subhead" style="color:red">$600</h3>
+                                    </div>
+                                    <div class="col-md-6 col-xs-12 no-padding">
+                                        <h3 class="md-subhead"><strong>PROMESA DE PAGO</strong></h3>
+                                        <form ng-submit="agregarPromesa()">
+                                            <div class="col-md-3 col-xs-4 no-padding">
+                                                <div class="form-group">
+                                                    <h5 class="md-subhead visible-md">IMPORTE</h5>
+                                                    <input id="importe" type="text" solo-numeros class="form-control form-control-shadow" ng-model="cliente.importe_negociado" required placeholder="IMPORTE" />
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 col-xs-4 no-padding">
+                                                <div class="form-group">
+                                                    <h5 class="md-subhead visible-md">FECHA</h5>
+                                                    <h3 class="hidden" id="fecha_label">{{fecha_importe| date:'dd/MM/yyyy'}}</h3>
+                                                    <input type="text" ng-focus="isPopupOpen=true" ng-click="isPopupOpen=true" class="form-control " uib-datepicker-popup="dd/MM/yyyy" placeholder="FECHA" required ng-model="fecha_importe" is-open="isPopupOpen" datepicker-options="dateOptions" ng-required="true" close-text="Close" alt-input-formats="altInputFormats" />
+
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-3 col-xs-4 no-padding">
+                                                <div class="form-group">
+                                                    <button type="submit" class="btn btn-primary btn-block btn-circle"><span class="glyphicon glyphicon-plus"></span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="col-md-6 col-xs-12 no-padding">
+                                        <div class="panel-group" id="accordion_propuesta">
+                                            <div class="panel panel-primary">
+                                                <div class="panel-heading">
+                                                    <h4 class="panel-title">
+                                                 <a data-toggle="collapse" data-parent="#accordion_propuesta" href="#collapse_propuesta">
+                                                 PROMESAS DE PAGO</a>
+                                               </h4>
+                                                </div>
+                                                <div id="collapse_propuesta" class="panel-collapse collapse in">
+                                                    <div class="panel-body">
+                                                        <div class="table-responsive">
+                                                            <table class="table table-hover">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th>Id</th>
+                                                                        <th>Importe</th>
+                                                                        <th>Fecha</th>
+                                                                        <th>Eliminar</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr ng-repeat="p in promesas">
+                                                                        <td>{{$index+1}}</td>
+                                                                        <td>{{p.importe|currency}}</td>
+                                                                        <td>{{p.fecha|date}}</td>
+                                                                        <td>
+                                                                            <a class="btn btn-default btn-circle" ng-click="eliminarPropuesta($index)">
+                                                                                <span class="glyphicon glyphicon-minus"></span>
+                                                                            </a>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                       </div>     
+                                     </div> 
+                                  </div>
+                                </div>
+                            </div>-->
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <div class="row" ng-show="angularLoaded" ng-cloak>
+            <div class="col-md-7 col-xs-12">
+                <label class="md-subhead"><strong>NOTAS</strong>
+                </label>
+                <textarea ng-model="bitacora.notas" class="form-control-shadow-text-area" style="width: 100%;     background: #ecf0f" rows="3" placeholder="ESCRIBE AQUÍ LAS NOTAS"></textarea>
+                <div class="col-md-6 pull-right">
+                    <input type="submit" value="Guardar" ng-click="guardarLlamada()" ng-disabled="!bitacora.id_status_llamada" class="btn btn-red" />
+                </div>
+
+            </div>
+            <div class="col-md-5 col-xs-12 padding-top">
+                <div class="panel-group" id="accordion">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                          <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+                          Historial Llamadas ({{historial.length}})</a>
+                        </h4>
+                        </div>
+                        <div id="collapse1" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <div class="table-responsive">
+                                    <table class="table table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th>Agente</th>
+                                                <th>Marco</th>
+                                                <th>Fecha/Hora</th>
+                                                <th>Status</th>
+                                                <th>Observaciones</th>
+                                                <th>Comentarios.</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr ng-repeat="h in historial">
+                                                <td>{{h.nombre_completo}}</td>
+                                                <td>{{h.id_tipo_llamada==1? "CELULAR":"CASA"}}</td>
+                                                <td>{{h.fecha}}</td>
+                                                <td>{{h.status_llamada|uppercase}}</td>
+                                                <td>
+                                                    <span ng-if="h.id_motivo_no_contacto>0">{{h.motivo_no_contacto|uppercase}}</span>
+                                                    <span ng-if="h.id_status_razon>0">{{h.razon_status|uppercase}}></span>
+                                                    <span ng-if="h.id_status_razon==0 && h.id_motivo_no_contacto==0">SIN OBSERVACIONES</span>
+                                                </td>
+                                                <td>{{h.notas}}</td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/vendor/wow.min.js"></script>
+    <!-- Angular Material Library -->
+    <script src="js/vendor/jquery-1.11.2.js"></script>
+    <script>
+     
+    $("div.bhoechie-tab-menu>div.list-group>a").click(function(e) {
+        e.preventDefault();
+        $(this).siblings('a.active').removeClass("active");
+        $(this).addClass("active");
+        var index = $(this).index();
+        $("div.bhoechie-tab>div.bhoechie-tab-content").removeClass("active");
+        $("div.bhoechie-tab>div.bhoechie-tab-content").eq(index).addClass("active");
+    });
+    </script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-aria.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-messages.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.3/moment.min.js"></script>
+    <script src="https://jtblin.github.io/angular-chart.js/node_modules/chart.js/dist/Chart.min.js"></script>
+    <script src="http://cdn.jsdelivr.net/angular.chartjs/latest/angular-chart.min.js"></script>
+    <script src="js/notiny.min.js"></script>
+    <script src="js/vendor/notify.min.js"></script>
+    <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-1.3.3.js"></script>
+    <script src="js/vendor/angular-smooth-scroll.js"></script>
+    <script src="js/angular/app.js?id=2.2"></script>
+    <script src="js/angular/controladores/mainCtrl.js?id=2.2"></script>
+</body>
+
+</html>
