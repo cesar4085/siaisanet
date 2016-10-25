@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<div  ng-cloak class="list-group col-md-6 col-xs-12">
+                            <a href="#" class="list-group-item visitor">
+                                <h3 class="pull-right">
+                                   <i class=" fa fa-th-list" aria-hidden="true"></i>
+                                </h3>
+                                <h4 class="list-group-item-heading count">
+                                    <strong>{{info._asignadas}}</strong></h4>
+                                <p class="list-group-item-text">
+                                    Asignadas</p>
+                            </a>
+                            <a href="#" class="list-group-item twitter">
+                                <h3 class="pull-right">
+                                  <i class="fa fa-history" aria-hidden="true"></i>
+                                </h3>
+                                <h4 class="list-group-item-heading count">
+                                    <strong>{{info._cola}}</strong></h4>
+                                <p class="list-group-item-text">
+                                   Cola</p>
+                            </a>
+                           <a href="#" class="list-group-item facebook-like">
+                                <h3 class="pull-right">
+                                    <i class="fa fa-phone" aria-hidden="true"></i>
+                                </h3>
+                                <h4 class="list-group-item-heading count">
+                                    <strong>{{info._llamadas}}  <small class="azul-font">({{info._vueltas|number:2}} vueltas)</small> </strong></h4>
+                                <p class="list-group-item-text">
+                                   Llamadas</p>
+                            </a>
+                           <a href="#" class="list-group-item twitter">
+                                <h3 class="pull-right">
+                                   <i class="fa fa-user" aria-hidden="true"></i>
+                                </h3>
+                                <h4 class="list-group-item-heading count">
+                                    <strong>{{info._contactadas}}</strong></h4>
+                                <p class="list-group-item-text">
+                                   Contactadas</p>
+                            </a>
+    
+</div>
+
+<div class="list-group col-md-6 col-xs-12">
+    <a href="../reporte.php?tipo=citas" class="list-group-item twitter">
+                                <h3 class="pull-right">
+                                   <i class="fa fa-calendar" aria-hidden="true"></i>
+                                </h3>
+                                <h4 class="list-group-item-heading count">
+                                    <strong>{{info._citas}}</strong></h4>
+                                <p class="list-group-item-text">
+                                   Citas</p>
+                            </a>
+       
+                         <a href="../reporte.php?tipo=fuera" class="list-group-item twitter">
+                                <h3 class="pull-right">
+                                  <i  class="fa fa-sign-out"  aria-hidden="true"></i>
+                                </h3>
+                                <h4 class="list-group-item-heading count">
+                                    <strong>{{info._fuera_servicio}}</strong></h4>
+                                <p class="list-group-item-text">
+                                   Fuera servicio, No vive ahí, etc.</p>
+                            </a>
+    
+                            <a href="../reporte.php?tipo=invalidos" class="list-group-item twitter">
+                                <h3 class="pull-right">
+                                  <i class="fa fa-ban" aria-hidden="true"></i>
+                                </h3>
+                                <h4 class="list-group-item-heading count">
+                                    <strong>{{info._invalidos}}</strong></h4>
+                                <p class="list-group-item-text">
+                                  Invalidos</p>
+                            </a>
+    
+                            <a href="../reporte.php?tipo=quejas" class="list-group-item twitter">
+                                <h3 class="pull-right">
+                                  <i class="fa fa-thumbs-o-down" aria-hidden="true"></i>
+                                </h3>
+                                <h4 class="list-group-item-heading count">
+                                    <strong>{{info._quejas}}</strong></h4>
+                                <p class="list-group-item-text">
+                                   Quejas</p>
+                            </a>
+</div>
+
+                      
+                          
+       
+       
+

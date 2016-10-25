@@ -1,0 +1,24 @@
+[22-Sep-2016 00:48:19 America/Mexico_City] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'sistem80_emailing.subscriptores' doesn't exist' in /home/sistem80/public_html/php/api/emailing/encabezados.php:39
+Stack trace:
+#0 /home/sistem80/public_html/php/api/emailing/encabezados.php(39): PDO->query('select no_contr...')
+#1 /home/sistem80/public_html/php/api/emailing/encabezados.php(19): getEncabezadosBd()
+#2 {main}
+  thrown in /home/sistem80/public_html/php/api/emailing/encabezados.php on line 39
+[22-Sep-2016 00:49:08 America/Mexico_City] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'sistem80_emailing.subscriptores' doesn't exist' in /home/sistem80/public_html/php/api/emailing/encabezados.php:39
+Stack trace:
+#0 /home/sistem80/public_html/php/api/emailing/encabezados.php(39): PDO->query('select no_contr...')
+#1 /home/sistem80/public_html/php/api/emailing/encabezados.php(19): getEncabezadosBd()
+#2 {main}
+  thrown in /home/sistem80/public_html/php/api/emailing/encabezados.php on line 39
+[22-Sep-2016 00:52:29 America/Mexico_City] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'sistem80_emailing.subscriptores' doesn't exist' in /home/sistem80/public_html/php/api/emailing/encabezados.php:39
+Stack trace:
+#0 /home/sistem80/public_html/php/api/emailing/encabezados.php(39): PDO->query('select no_contr...')
+#1 /home/sistem80/public_html/php/api/emailing/encabezados.php(19): getEncabezadosBd()
+#2 {main}
+  thrown in /home/sistem80/public_html/php/api/emailing/encabezados.php on line 39
+[22-Sep-2016 00:56:11 America/Mexico_City] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'sistem80_emailing.subscriptores' doesn't exist' in /home/sistem80/public_html/php/api/emailing/encabezados.php:39
+Stack trace:
+#0 /home/sistem80/public_html/php/api/emailing/encabezados.php(39): PDO->query('select no_contr...')
+#1 /home/sistem80/public_html/php/api/emailing/encabezados.php(19): getEncabezadosBd()
+#2 {main}
+  thrown in /home/sistem80/public_html/php/api/emailing/encabezados.php on line 39
