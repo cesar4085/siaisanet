@@ -1,0 +1,64 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 17/09/2016, 01:51:08 PM
+    Author     : OSCARITO
+*/
+
+fieldset.standard {
+    border-style: solid;
+    border-width: 1px;
+    height: 100%;
+}
+legend{
+    color: #3F51B5;
+}
+.white{
+    color:white!important;
+}
+.azul-bamberger{
+   color:rgb(0, 99, 177);
+}
+.centro{
+    text-align: center;
+}
+md-toolbar.md-default-theme:not(.md-menu-toolbar), md-toolbar:not(.md-menu-toolbar) {
+    background-color:#262368!important;
+    color: rgba(255, 255, 255, 0.87);
+}
+#content{
+   background-color:#F2F2F2;
+}
+#frame{
+    background-color: white;
+    -webkit-box-shadow: 0px 9px 4px 0px rgba(50, 50, 50, 0.75);
+-moz-box-shadow:    0px 9px 4px 0px rgba(50, 50, 50, 0.75);
+box-shadow:         0px 9px 4px 0px rgba(50, 50, 50, 0.75)!important;
+}
+
+.btn-red{
+    
+    background-color: #EC1C24;
+    border: solid 1px #EC1C24;
+    color: white;
+    font-weight: lighter;
+    border-radius: 8px;
+    padding: 8px 12px;
+    float: right;
+    margin-top: 10px;
+    clear: both;
+}
+.btn-red:hover,.btn-red:focus{
+        color: #EC1C24;
+	background-color: white;
+	cursor: pointer;
+}
+.btn-red:disabled {
+	background-color: #989898;
+	color: #575757;
+	border: solid 1px #575757;
+	cursor: default;
+}

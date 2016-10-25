@@ -1,0 +1,354 @@
+[22-Oct-2016 16:45:20 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '7' for key 'PRIMARY'' in /home/promoc23/public_html/php/Model/ReporteModel.php:14
+Stack trace:
+#0 /home/promoc23/public_html/php/Model/ReporteModel.php(14): PDOStatement->execute()
+#1 /home/promoc23/public_html/reporte.php(13): ReporteModel->getProductividad()
+#2 {main}
+  thrown in /home/promoc23/public_html/php/Model/ReporteModel.php on line 14
+[24-Oct-2016 17:06:10 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '2' for key 'PRIMARY'' in /home/promoc23/public_html/php/Model/ReporteModel.php:14
+Stack trace:
+#0 /home/promoc23/public_html/php/Model/ReporteModel.php(14): PDOStatement->execute()
+#1 /home/promoc23/public_html/reporte.php(13): ReporteModel->getProductividad()
+#2 {main}
+  thrown in /home/promoc23/public_html/php/Model/ReporteModel.php on line 14
+[24-Oct-2016 19:40:03 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '6' for key 'PRIMARY'' in /home/promoc23/public_html/php/Model/ReporteModel.php:14
+Stack trace:
+#0 /home/promoc23/public_html/php/Model/ReporteModel.php(14): PDOStatement->execute()
+#1 /home/promoc23/public_html/reporte.php(13): ReporteModel->getProductividad()
+#2 {main}
+  thrown in /home/promoc23/public_html/php/Model/ReporteModel.php on line 14
+[24-Oct-2016 21:43:06 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '8' for key 'PRIMARY'' in /home/promoc23/public_html/php/Model/ReporteModel.php:14
+Stack trace:
+#0 /home/promoc23/public_html/php/Model/ReporteModel.php(14): PDOStatement->execute()
+#1 /home/promoc23/public_html/reporte.php(13): ReporteModel->getProductividad()
+#2 {main}
+  thrown in /home/promoc23/public_html/php/Model/ReporteModel.php on line 14
+[24-Oct-2016 22:18:19 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '2' for key 'PRIMARY'' in /home/promoc23/public_html/php/Model/ReporteModel.php:14
+Stack trace:
+#0 /home/promoc23/public_html/php/Model/ReporteModel.php(14): PDOStatement->execute()
+#1 /home/promoc23/public_html/reporte.php(13): ReporteModel->getProductividad()
+#2 {main}
+  thrown in /home/promoc23/public_html/php/Model/ReporteModel.php on line 14
+[24-Oct-2016 22:21:39 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '6' for key 'PRIMARY'' in /home/promoc23/public_html/php/Model/ReporteModel.php:14
+Stack trace:
+#0 /home/promoc23/public_html/php/Model/ReporteModel.php(14): PDOStatement->execute()
+#1 /home/promoc23/public_html/reporte.php(13): ReporteModel->getProductividad()
+#2 {main}
+  thrown in /home/promoc23/public_html/php/Model/ReporteModel.php on line 14
+[24-Oct-2016 22:36:59 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '6' for key 'PRIMARY'' in /home/promoc23/public_html/php/Model/ReporteModel.php:14
+Stack trace:
+#0 /home/promoc23/public_html/php/Model/ReporteModel.php(14): PDOStatement->execute()
+#1 /home/promoc23/public_html/reporte.php(13): ReporteModel->getProductividad()
+#2 {main}
+  thrown in /home/promoc23/public_html/php/Model/ReporteModel.php on line 14
+[24-Oct-2016 22:37:42 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '7' for key 'PRIMARY'' in /home/promoc23/public_html/php/Model/ReporteModel.php:14
+Stack trace:
+#0 /home/promoc23/public_html/php/Model/ReporteModel.php(14): PDOStatement->execute()
+#1 /home/promoc23/public_html/reporte.php(13): ReporteModel->getProductividad()
+#2 {main}
+  thrown in /home/promoc23/public_html/php/Model/ReporteModel.php on line 14
+[24-Oct-2016 22:39:39 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '6' for key 'PRIMARY'' in /home/promoc23/public_html/php/Model/ReporteModel.php:14
+Stack trace:
+#0 /home/promoc23/public_html/php/Model/ReporteModel.php(14): PDOStatement->execute()
+#1 /home/promoc23/public_html/reporte.php(13): ReporteModel->getProductividad()
+#2 {main}
+  thrown in /home/promoc23/public_html/php/Model/ReporteModel.php on line 14
+[24-Oct-2016 22:40:59 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '4' for key 'PRIMARY'' in /home/promoc23/public_html/php/Model/ReporteModel.php:14
+Stack trace:
+#0 /home/promoc23/public_html/php/Model/ReporteModel.php(14): PDOStatement->execute()
+#1 /home/promoc23/public_html/reporte.php(13): ReporteModel->getProductividad()
+#2 {main}
+  thrown in /home/promoc23/public_html/php/Model/ReporteModel.php on line 14
+[24-Oct-2016 22:41:39 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '2' for key 'PRIMARY'' in /home/promoc23/public_html/php/Model/ReporteModel.php:14
+Stack trace:
+#0 /home/promoc23/public_html/php/Model/ReporteModel.php(14): PDOStatement->execute()
+#1 /home/promoc23/public_html/reporte.php(13): ReporteModel->getProductividad()
+#2 {main}
+  thrown in /home/promoc23/public_html/php/Model/ReporteModel.php on line 14
+[24-Oct-2016 22:41:39 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '4' for key 'PRIMARY'' in /home/promoc23/public_html/php/Model/ReporteModel.php:14
+Stack trace:
+#0 /home/promoc23/public_html/php/Model/ReporteModel.php(14): PDOStatement->execute()
+#1 /home/promoc23/public_html/reporte.php(13): ReporteModel->getProductividad()
+#2 {main}
+  thrown in /home/promoc23/public_html/php/Model/ReporteModel.php on line 14
+[24-Oct-2016 22:42:59 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '6' for key 'PRIMARY'' in /home/promoc23/public_html/php/Model/ReporteModel.php:14
+Stack trace:
+#0 /home/promoc23/public_html/php/Model/ReporteModel.php(14): PDOStatement->execute()
+#1 /home/promoc23/public_html/reporte.php(13): ReporteModel->getProductividad()
+#2 {main}
+  thrown in /home/promoc23/public_html/php/Model/ReporteModel.php on line 14
+[24-Oct-2016 22:44:21 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '2' for key 'PRIMARY'' in /home/promoc23/public_html/php/Model/ReporteModel.php:14
+Stack trace:
+#0 /home/promoc23/public_html/php/Model/ReporteModel.php(14): PDOStatement->execute()
+#1 /home/promoc23/public_html/reporte.php(13): ReporteModel->getProductividad()
+#2 {main}
+  thrown in /home/promoc23/public_html/php/Model/ReporteModel.php on line 14
+[24-Oct-2016 22:44:26 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '7' for key 'PRIMARY'' in /home/promoc23/public_html/php/Model/ReporteModel.php:14
+Stack trace:
+#0 /home/promoc23/public_html/php/Model/ReporteModel.php(14): PDOStatement->execute()
+#1 /home/promoc23/public_html/reporte.php(13): ReporteModel->getProductividad()
+#2 {main}
+  thrown in /home/promoc23/public_html/php/Model/ReporteModel.php on line 14
+[24-Oct-2016 22:47:00 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '2' for key 'PRIMARY'' in /home/promoc23/public_html/php/Model/ReporteModel.php:14
+Stack trace:
+#0 /home/promoc23/public_html/php/Model/ReporteModel.php(14): PDOStatement->execute()
+#1 /home/promoc23/public_html/reporte.php(13): ReporteModel->getProductividad()
+#2 {main}
+  thrown in /home/promoc23/public_html/php/Model/ReporteModel.php on line 14
+[24-Oct-2016 22:47:00 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '2' for key 'PRIMARY'' in /home/promoc23/public_html/php/Model/ReporteModel.php:14
+Stack trace:
+#0 /home/promoc23/public_html/php/Model/ReporteModel.php(14): PDOStatement->execute()
+#1 /home/promoc23/public_html/reporte.php(13): ReporteModel->getProductividad()
+#2 {main}
+  thrown in /home/promoc23/public_html/php/Model/ReporteModel.php on line 14
+[24-Oct-2016 22:47:39 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '7' for key 'PRIMARY'' in /home/promoc23/public_html/php/Model/ReporteModel.php:14
+Stack trace:
+#0 /home/promoc23/public_html/php/Model/ReporteModel.php(14): PDOStatement->execute()
+#1 /home/promoc23/public_html/reporte.php(13): ReporteModel->getProductividad()
+#2 {main}
+  thrown in /home/promoc23/public_html/php/Model/ReporteModel.php on line 14
+[24-Oct-2016 22:48:59 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '5' for key 'PRIMARY'' in /home/promoc23/public_html/php/Model/ReporteModel.php:14
+Stack trace:
+#0 /home/promoc23/public_html/php/Model/ReporteModel.php(14): PDOStatement->execute()
+#1 /home/promoc23/public_html/reporte.php(13): ReporteModel->getProductividad()
+#2 {main}
+  thrown in /home/promoc23/public_html/php/Model/ReporteModel.php on line 14
+[24-Oct-2016 22:50:19 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '5' for key 'PRIMARY'' in /home/promoc23/public_html/php/Model/ReporteModel.php:14
+Stack trace:
+#0 /home/promoc23/public_html/php/Model/ReporteModel.php(14): PDOStatement->execute()
+#1 /home/promoc23/public_html/reporte.php(13): ReporteModel->getProductividad()
+#2 {main}
+  thrown in /home/promoc23/public_html/php/Model/ReporteModel.php on line 14
+[24-Oct-2016 22:51:39 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '4' for key 'PRIMARY'' in /home/promoc23/public_html/php/Model/ReporteModel.php:14
+Stack trace:
+#0 /home/promoc23/public_html/php/Model/ReporteModel.php(14): PDOStatement->execute()
+#1 /home/promoc23/public_html/reporte.php(13): ReporteModel->getProductividad()
+#2 {main}
+  thrown in /home/promoc23/public_html/php/Model/ReporteModel.php on line 14
+[24-Oct-2016 22:53:39 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '6' for key 'PRIMARY'' in /home/promoc23/public_html/php/Model/ReporteModel.php:14
+Stack trace:
+#0 /home/promoc23/public_html/php/Model/ReporteModel.php(14): PDOStatement->execute()
+#1 /home/promoc23/public_html/reporte.php(13): ReporteModel->getProductividad()
+#2 {main}
+  thrown in /home/promoc23/public_html/php/Model/ReporteModel.php on line 14
+[24-Oct-2016 22:55:39 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '2' for key 'PRIMARY'' in /home/promoc23/public_html/php/Model/ReporteModel.php:14
+Stack trace:
+#0 /home/promoc23/public_html/php/Model/ReporteModel.php(14): PDOStatement->execute()
+#1 /home/promoc23/public_html/reporte.php(13): ReporteModel->getProductividad()
+#2 {main}
+  thrown in /home/promoc23/public_html/php/Model/ReporteModel.php on line 14
+[24-Oct-2016 22:55:40 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '2' for key 'PRIMARY'' in /home/promoc23/public_html/php/Model/ReporteModel.php:14
+Stack trace:
+#0 /home/promoc23/public_html/php/Model/ReporteModel.php(14): PDOStatement->execute()
+#1 /home/promoc23/public_html/reporte.php(13): ReporteModel->getProductividad()
+#2 {main}
+  thrown in /home/promoc23/public_html/php/Model/ReporteModel.php on line 14
+[24-Oct-2016 22:57:39 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '2' for key 'PRIMARY'' in /home/promoc23/public_html/php/Model/ReporteModel.php:14
+Stack trace:
+#0 /home/promoc23/public_html/php/Model/ReporteModel.php(14): PDOStatement->execute()
+#1 /home/promoc23/public_html/reporte.php(13): ReporteModel->getProductividad()
+#2 {main}
+  thrown in /home/promoc23/public_html/php/Model/ReporteModel.php on line 14
+[24-Oct-2016 22:57:39 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '2' for key 'PRIMARY'' in /home/promoc23/public_html/php/Model/ReporteModel.php:14
+Stack trace:
+#0 /home/promoc23/public_html/php/Model/ReporteModel.php(14): PDOStatement->execute()
+#1 /home/promoc23/public_html/reporte.php(13): ReporteModel->getProductividad()
+#2 {main}
+  thrown in /home/promoc23/public_html/php/Model/ReporteModel.php on line 14
+[24-Oct-2016 22:58:19 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '2' for key 'PRIMARY'' in /home/promoc23/public_html/php/Model/ReporteModel.php:14
+Stack trace:
+#0 /home/promoc23/public_html/php/Model/ReporteModel.php(14): PDOStatement->execute()
+#1 /home/promoc23/public_html/reporte.php(13): ReporteModel->getProductividad()
+#2 {main}
+  thrown in /home/promoc23/public_html/php/Model/ReporteModel.php on line 14
+[24-Oct-2016 22:58:59 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '6' for key 'PRIMARY'' in /home/promoc23/public_html/php/Model/ReporteModel.php:14
+Stack trace:
+#0 /home/promoc23/public_html/php/Model/ReporteModel.php(14): PDOStatement->execute()
+#1 /home/promoc23/public_html/reporte.php(13): ReporteModel->getProductividad()
+#2 {main}
+  thrown in /home/promoc23/public_html/php/Model/ReporteModel.php on line 14
+[24-Oct-2016 23:00:59 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '2' for key 'PRIMARY'' in /home/promoc23/public_html/php/Model/ReporteModel.php:14
+Stack trace:
+#0 /home/promoc23/public_html/php/Model/ReporteModel.php(14): PDOStatement->execute()
+#1 /home/promoc23/public_html/reporte.php(13): ReporteModel->getProductividad()
+#2 {main}
+  thrown in /home/promoc23/public_html/php/Model/ReporteModel.php on line 14
+[24-Oct-2016 23:00:59 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '6' for key 'PRIMARY'' in /home/promoc23/public_html/php/Model/ReporteModel.php:14
+Stack trace:
+#0 /home/promoc23/public_html/php/Model/ReporteModel.php(14): PDOStatement->execute()
+#1 /home/promoc23/public_html/reporte.php(13): ReporteModel->getProductividad()
+#2 {main}
+  thrown in /home/promoc23/public_html/php/Model/ReporteModel.php on line 14
+[24-Oct-2016 23:01:40 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '2' for key 'PRIMARY'' in /home/promoc23/public_html/php/Model/ReporteModel.php:14
+Stack trace:
+#0 /home/promoc23/public_html/php/Model/ReporteModel.php(14): PDOStatement->execute()
+#1 /home/promoc23/public_html/reporte.php(13): ReporteModel->getProductividad()
+#2 {main}
+  thrown in /home/promoc23/public_html/php/Model/ReporteModel.php on line 14
+[24-Oct-2016 23:02:19 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '2' for key 'PRIMARY'' in /home/promoc23/public_html/php/Model/ReporteModel.php:14
+Stack trace:
+#0 /home/promoc23/public_html/php/Model/ReporteModel.php(14): PDOStatement->execute()
+#1 /home/promoc23/public_html/reporte.php(13): ReporteModel->getProductividad()
+#2 {main}
+  thrown in /home/promoc23/public_html/php/Model/ReporteModel.php on line 14
+[24-Oct-2016 23:03:03 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '8' for key 'PRIMARY'' in /home/promoc23/public_html/php/Model/ReporteModel.php:14
+Stack trace:
+#0 /home/promoc23/public_html/php/Model/ReporteModel.php(14): PDOStatement->execute()
+#1 /home/promoc23/public_html/reporte.php(13): ReporteModel->getProductividad()
+#2 {main}
+  thrown in /home/promoc23/public_html/php/Model/ReporteModel.php on line 14
+[24-Oct-2016 23:06:19 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '4' for key 'PRIMARY'' in /home/promoc23/public_html/php/Model/ReporteModel.php:14
+Stack trace:
+#0 /home/promoc23/public_html/php/Model/ReporteModel.php(14): PDOStatement->execute()
+#1 /home/promoc23/public_html/reporte.php(13): ReporteModel->getProductividad()
+#2 {main}
+  thrown in /home/promoc23/public_html/php/Model/ReporteModel.php on line 14
+[24-Oct-2016 23:08:19 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '2' for key 'PRIMARY'' in /home/promoc23/public_html/php/Model/ReporteModel.php:14
+Stack trace:
+#0 /home/promoc23/public_html/php/Model/ReporteModel.php(14): PDOStatement->execute()
+#1 /home/promoc23/public_html/reporte.php(13): ReporteModel->getProductividad()
+#2 {main}
+  thrown in /home/promoc23/public_html/php/Model/ReporteModel.php on line 14
+[24-Oct-2016 23:08:59 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '6' for key 'PRIMARY'' in /home/promoc23/public_html/php/Model/ReporteModel.php:14
+Stack trace:
+#0 /home/promoc23/public_html/php/Model/ReporteModel.php(14): PDOStatement->execute()
+#1 /home/promoc23/public_html/reporte.php(13): ReporteModel->getProductividad()
+#2 {main}
+  thrown in /home/promoc23/public_html/php/Model/ReporteModel.php on line 14
+[24-Oct-2016 23:09:39 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '2' for key 'PRIMARY'' in /home/promoc23/public_html/php/Model/ReporteModel.php:14
+Stack trace:
+#0 /home/promoc23/public_html/php/Model/ReporteModel.php(14): PDOStatement->execute()
+#1 /home/promoc23/public_html/reporte.php(13): ReporteModel->getProductividad()
+#2 {main}
+  thrown in /home/promoc23/public_html/php/Model/ReporteModel.php on line 14
+[24-Oct-2016 23:12:19 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '4' for key 'PRIMARY'' in /home/promoc23/public_html/php/Model/ReporteModel.php:14
+Stack trace:
+#0 /home/promoc23/public_html/php/Model/ReporteModel.php(14): PDOStatement->execute()
+#1 /home/promoc23/public_html/reporte.php(13): ReporteModel->getProductividad()
+#2 {main}
+  thrown in /home/promoc23/public_html/php/Model/ReporteModel.php on line 14
+[24-Oct-2016 23:12:59 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '7' for key 'PRIMARY'' in /home/promoc23/public_html/php/Model/ReporteModel.php:14
+Stack trace:
+#0 /home/promoc23/public_html/php/Model/ReporteModel.php(14): PDOStatement->execute()
+#1 /home/promoc23/public_html/reporte.php(13): ReporteModel->getProductividad()
+#2 {main}
+  thrown in /home/promoc23/public_html/php/Model/ReporteModel.php on line 14
+[24-Oct-2016 23:16:21 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '2' for key 'PRIMARY'' in /home/promoc23/public_html/php/Model/ReporteModel.php:14
+Stack trace:
+#0 /home/promoc23/public_html/php/Model/ReporteModel.php(14): PDOStatement->execute()
+#1 /home/promoc23/public_html/reporte.php(13): ReporteModel->getProductividad()
+#2 {main}
+  thrown in /home/promoc23/public_html/php/Model/ReporteModel.php on line 14
+[24-Oct-2016 23:18:19 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '8' for key 'PRIMARY'' in /home/promoc23/public_html/php/Model/ReporteModel.php:14
+Stack trace:
+#0 /home/promoc23/public_html/php/Model/ReporteModel.php(14): PDOStatement->execute()
+#1 /home/promoc23/public_html/reporte.php(13): ReporteModel->getProductividad()
+#2 {main}
+  thrown in /home/promoc23/public_html/php/Model/ReporteModel.php on line 14
+[24-Oct-2016 23:26:59 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '2' for key 'PRIMARY'' in /home/promoc23/public_html/php/Model/ReporteModel.php:14
+Stack trace:
+#0 /home/promoc23/public_html/php/Model/ReporteModel.php(14): PDOStatement->execute()
+#1 /home/promoc23/public_html/reporte.php(13): ReporteModel->getProductividad()
+#2 {main}
+  thrown in /home/promoc23/public_html/php/Model/ReporteModel.php on line 14
+[24-Oct-2016 23:29:39 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '7' for key 'PRIMARY'' in /home/promoc23/public_html/php/Model/ReporteModel.php:14
+Stack trace:
+#0 /home/promoc23/public_html/php/Model/ReporteModel.php(14): PDOStatement->execute()
+#1 /home/promoc23/public_html/reporte.php(13): ReporteModel->getProductividad()
+#2 {main}
+  thrown in /home/promoc23/public_html/php/Model/ReporteModel.php on line 14
+[24-Oct-2016 23:30:59 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '2' for key 'PRIMARY'' in /home/promoc23/public_html/php/Model/ReporteModel.php:14
+Stack trace:
+#0 /home/promoc23/public_html/php/Model/ReporteModel.php(14): PDOStatement->execute()
+#1 /home/promoc23/public_html/reporte.php(13): ReporteModel->getProductividad()
+#2 {main}
+  thrown in /home/promoc23/public_html/php/Model/ReporteModel.php on line 14
+[24-Oct-2016 23:30:59 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '2' for key 'PRIMARY'' in /home/promoc23/public_html/php/Model/ReporteModel.php:14
+Stack trace:
+#0 /home/promoc23/public_html/php/Model/ReporteModel.php(14): PDOStatement->execute()
+#1 /home/promoc23/public_html/reporte.php(13): ReporteModel->getProductividad()
+#2 {main}
+  thrown in /home/promoc23/public_html/php/Model/ReporteModel.php on line 14
+[24-Oct-2016 23:34:20 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '6' for key 'PRIMARY'' in /home/promoc23/public_html/php/Model/ReporteModel.php:14
+Stack trace:
+#0 /home/promoc23/public_html/php/Model/ReporteModel.php(14): PDOStatement->execute()
+#1 /home/promoc23/public_html/reporte.php(13): ReporteModel->getProductividad()
+#2 {main}
+  thrown in /home/promoc23/public_html/php/Model/ReporteModel.php on line 14
+[24-Oct-2016 23:34:59 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '2' for key 'PRIMARY'' in /home/promoc23/public_html/php/Model/ReporteModel.php:14
+Stack trace:
+#0 /home/promoc23/public_html/php/Model/ReporteModel.php(14): PDOStatement->execute()
+#1 /home/promoc23/public_html/reporte.php(13): ReporteModel->getProductividad()
+#2 {main}
+  thrown in /home/promoc23/public_html/php/Model/ReporteModel.php on line 14
+[24-Oct-2016 23:38:19 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '2' for key 'PRIMARY'' in /home/promoc23/public_html/php/Model/ReporteModel.php:14
+Stack trace:
+#0 /home/promoc23/public_html/php/Model/ReporteModel.php(14): PDOStatement->execute()
+#1 /home/promoc23/public_html/reporte.php(13): ReporteModel->getProductividad()
+#2 {main}
+  thrown in /home/promoc23/public_html/php/Model/ReporteModel.php on line 14
+[24-Oct-2016 23:38:19 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '7' for key 'PRIMARY'' in /home/promoc23/public_html/php/Model/ReporteModel.php:14
+Stack trace:
+#0 /home/promoc23/public_html/php/Model/ReporteModel.php(14): PDOStatement->execute()
+#1 /home/promoc23/public_html/reporte.php(13): ReporteModel->getProductividad()
+#2 {main}
+  thrown in /home/promoc23/public_html/php/Model/ReporteModel.php on line 14
+[24-Oct-2016 23:39:39 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '4' for key 'PRIMARY'' in /home/promoc23/public_html/php/Model/ReporteModel.php:14
+Stack trace:
+#0 /home/promoc23/public_html/php/Model/ReporteModel.php(14): PDOStatement->execute()
+#1 /home/promoc23/public_html/reporte.php(13): ReporteModel->getProductividad()
+#2 {main}
+  thrown in /home/promoc23/public_html/php/Model/ReporteModel.php on line 14
+[24-Oct-2016 23:41:40 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '2' for key 'PRIMARY'' in /home/promoc23/public_html/php/Model/ReporteModel.php:14
+Stack trace:
+#0 /home/promoc23/public_html/php/Model/ReporteModel.php(14): PDOStatement->execute()
+#1 /home/promoc23/public_html/reporte.php(13): ReporteModel->getProductividad()
+#2 {main}
+  thrown in /home/promoc23/public_html/php/Model/ReporteModel.php on line 14
+[24-Oct-2016 23:41:40 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '4' for key 'PRIMARY'' in /home/promoc23/public_html/php/Model/ReporteModel.php:14
+Stack trace:
+#0 /home/promoc23/public_html/php/Model/ReporteModel.php(14): PDOStatement->execute()
+#1 /home/promoc23/public_html/reporte.php(13): ReporteModel->getProductividad()
+#2 {main}
+  thrown in /home/promoc23/public_html/php/Model/ReporteModel.php on line 14
+[24-Oct-2016 23:44:19 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '7' for key 'PRIMARY'' in /home/promoc23/public_html/php/Model/ReporteModel.php:14
+Stack trace:
+#0 /home/promoc23/public_html/php/Model/ReporteModel.php(14): PDOStatement->execute()
+#1 /home/promoc23/public_html/reporte.php(13): ReporteModel->getProductividad()
+#2 {main}
+  thrown in /home/promoc23/public_html/php/Model/ReporteModel.php on line 14
+[24-Oct-2016 23:45:39 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '2' for key 'PRIMARY'' in /home/promoc23/public_html/php/Model/ReporteModel.php:14
+Stack trace:
+#0 /home/promoc23/public_html/php/Model/ReporteModel.php(14): PDOStatement->execute()
+#1 /home/promoc23/public_html/reporte.php(13): ReporteModel->getProductividad()
+#2 {main}
+  thrown in /home/promoc23/public_html/php/Model/ReporteModel.php on line 14
+[24-Oct-2016 23:47:39 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '7' for key 'PRIMARY'' in /home/promoc23/public_html/php/Model/ReporteModel.php:14
+Stack trace:
+#0 /home/promoc23/public_html/php/Model/ReporteModel.php(14): PDOStatement->execute()
+#1 /home/promoc23/public_html/reporte.php(13): ReporteModel->getProductividad()
+#2 {main}
+  thrown in /home/promoc23/public_html/php/Model/ReporteModel.php on line 14
+[24-Oct-2016 23:52:59 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '5' for key 'PRIMARY'' in /home/promoc23/public_html/php/Model/ReporteModel.php:14
+Stack trace:
+#0 /home/promoc23/public_html/php/Model/ReporteModel.php(14): PDOStatement->execute()
+#1 /home/promoc23/public_html/reporte.php(13): ReporteModel->getProductividad()
+#2 {main}
+  thrown in /home/promoc23/public_html/php/Model/ReporteModel.php on line 14
+[24-Oct-2016 23:58:19 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '2' for key 'PRIMARY'' in /home/promoc23/public_html/php/Model/ReporteModel.php:14
+Stack trace:
+#0 /home/promoc23/public_html/php/Model/ReporteModel.php(14): PDOStatement->execute()
+#1 /home/promoc23/public_html/reporte.php(13): ReporteModel->getProductividad()
+#2 {main}
+  thrown in /home/promoc23/public_html/php/Model/ReporteModel.php on line 14
+[25-Oct-2016 01:03:59 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '2' for key 'PRIMARY'' in /home/promoc23/public_html/php/Model/ReporteModel.php:14
+Stack trace:
+#0 /home/promoc23/public_html/php/Model/ReporteModel.php(14): PDOStatement->execute()
+#1 /home/promoc23/public_html/reporte.php(13): ReporteModel->getProductividad()
+#2 {main}
+  thrown in /home/promoc23/public_html/php/Model/ReporteModel.php on line 14
+[25-Oct-2016 01:11:26 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '4' for key 'PRIMARY'' in /home/promoc23/public_html/php/Model/ReporteModel.php:14
+Stack trace:
+#0 /home/promoc23/public_html/php/Model/ReporteModel.php(14): PDOStatement->execute()
+#1 /home/promoc23/public_html/reporte.php(13): ReporteModel->getProductividad()
+#2 {main}
+  thrown in /home/promoc23/public_html/php/Model/ReporteModel.php on line 14
