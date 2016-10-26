@@ -21,7 +21,7 @@ class EncuestaModel extends IModel {
     public function getBitacora($id_cliente){
        
         try{
-           $query=$this->conn->prepare("SELECT*FROM encuesta_historial WHERE id_cliente=:id_cliente");
+           $query=$this->conn->prepare("SELECT*FROM encuesta_historial WHERE inicio between (SELECT fecha_carga as date FROM sistem80_siaisa.base_de_datos where base_activa = 1 ) and  (select current_timestamp()) and id_cliente=:id_cliente");
            $query->bindParam(":id_cliente",$id_cliente);
            $query->execute();
            $res=$query->fetchAll(PDO::FETCH_ASSOC);
