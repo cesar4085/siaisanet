@@ -217,25 +217,90 @@
               </table>
             
                 
-      </div>
+               </div>
+            </div>
+          </div>
+          
+      <!-- /.row (main row) -->
+<div class="col-md-7">
+              <div class="box box-primary" ng-cloak>
+                <div class="box-header with-border">
+              <h3 class="box-title">Otras Financieras</h3>
+          <div class="box-tools pull-right">
+                    <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                    </button>
+                    <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                  </div>
+            </div>
          <div class="box-body">
-                 <div class="col-md-12 col-sm-12">
-                          <ng-include  src="'../html/menu_info.html'"></ng-include>
-                    </div>
+                
                    
                     <div class="col-md-12 col-sm-12 no-padding">
                     <canvas id="bar" class="chart chart-bar"
                                 chart-data="data_financiera" chart-labels="labels_financiera" chart-options="options_financiera" >
                     </canvas> 
-               </div> 
-                </div>
-      <!-- /.row (main row) -->
+                    </div> 
+               
+                     </div>
+                  </div>
+           </div>
 
-    </section>
     <!-- /.content -->
-
-
-
+<div class="col-md-5">
+          <div class="box">
+            <div class="box-header with-border">
+              <h3 class="box-title">Calificaciones.</h3>
+          <div class="box-tools pull-right">
+                    <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                    </button>
+                    <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                  </div>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+           
+              <div class="col-md-12 col-sm-12 col-xs-12">
+            
+                          
+                          <div class="col-md-12 no-padding">
+                              <canvas id="base" class="chart-horizontal-bar"
+                                chart-data="data_cal" chart-labels="labels_cal" chart-options="options" >
+                              </canvas> 
+                          </div>
+            
+                
+               </div>
+            </div>
+          </div>
+</div>
+<div class="col-md-7">
+          <div class="box">
+            <div class="box-header with-border">
+              <h3 class="box-title">Motivo de no Interes</h3>
+          <div class="box-tools pull-right">
+                    <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                    </button>
+                    <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                  </div>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+           
+              <div class="col-md-12 col-sm-12 col-xs-12">
+              <div class="col-md-12 no-padding">
+                              <canvas id="bar" class="chart chart-bar"
+                                chart-data="data_motivo" chart-labels="labels_motivo" chart-options="options_motivo" >
+                              </canvas> 
+                          </div>
+                          
+                       
+            
+                
+               </div>
+            </div>
+          </div>
+</div>
+    </section>
 
   <!-- Control Sidebar -->
   <aside class="control-sidebar control-sidebar-dark">
