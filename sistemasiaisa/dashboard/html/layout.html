@@ -1,0 +1,99 @@
+<div class="row">
+    <div class="col-md-7">
+        <div class="box box-primary" ng-cloak>
+            <div class="box-header with-border">
+                <h3 class="box-title">Subir archivo (csv)</h3>
+                <div class="box-tools pull-right">
+                    <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                    </button>
+                    <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i>
+                    </button>
+                </div>
+            </div>
+            <form ng-submit="analizar()">
+                <div class="box-body">
+
+                    <div class="form-group no-padding">
+                        <img ng-show="isLoading" src="../img/ellipsis.svg" />
+
+                        <div class="fom-group">
+                            <label for="tipo">¿Será archivo de respuesta cruzada o informe de entregas?</label>
+                            <select id="tipo" ng-model="seleccion.tipo" class="form-control">
+                                <option ng-value="1" ng-selected="true">Informe entregas</option>
+                                <option ng-value="2">Respuesta</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group" ng-show="seleccion.tipo==2">
+                            <label for="producto">Ingresa el id producto</label>
+                            <input class="form-control" ng-model="seleccion.id_producto" id="producto" type="text" placeholder="producto" maxlength="4"
+                            />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="csv">Elige el archivo que subirás</label>
+                            <input type="file" id="csv" name="csv" accept=".csv" class="filestyle" data-buttonText="Elegir archivo" />
+                        </div>
+
+
+                        <div class="col-md-6 col-xs-6">
+                            <input type="submit" class="btn btn-info btn-sm btn-lg btn-block" value="Analizar " />
+                        </div>
+                        <div class="col-md-6 col-xs-6">
+                            <input type="button" ng-click="guardarBD()" class="btn btn-info btn-sm btn-lg btn-block" value="Guardar en BD"
+                            ng-disabled="isEmpty()" />
+                        </div>
+
+                        <div class="col-md-12" ng-if="layoutCargado==true">
+                            <h3 class="md-subhead">Selección</h3>
+                            <pre>{{seleccion | json}}</pre>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- /.box-body -->
+            </form>
+        </div>
+    </div>
+    <div class="col-md-5" ng-if="layoutCargado==true">
+        <div class="box box-primary" ng-cloak>
+            <div class="box-header with-border">
+                <h3 class="box-title"><small> Relaciona las columnas de la BD con las de tu archivo </small></h3>
+                <div class="box-tools pull-right">
+                    <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                    </button>
+                    <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="box-body">
+
+                    <h4>
+                                Total de registros: <strong><i id="total">{{data.total}}</i></strong>
+
+                            </h4>
+
+                    <form name="form_seleccion">
+                        <div class="form-group" ng-repeat="en in data.bd_encabezado">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <span>{{en|uppercase}}</span>
+                                </div>
+
+                                <div class="col-md-6">
+
+                                    <select class="form-control" ng-model="seleccion[en]">
+                                        <option ng-value="#">ninguno</option>
+                                        <option ng-repeat="op in data.encabezado track by $index" ng-value="$index">
+                                            {{op}}
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+        </div>
+    </div>
+   <script src="plugins/file/bootstrap-filestyle.min.js"></script>

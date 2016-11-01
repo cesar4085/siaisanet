@@ -12,7 +12,7 @@
                 $menu = new MenuModel();
          ?>
         
-        <iframe src="<?php echo 'http://promocionesfinancieraayudamos.com/dashboard/#/inicio/'.$menu->getUsuarioNombre()?>" frameborder="0" width="100%" height="100%" style="position:fixed; top:0px; left:0px; bottom:0px; right:0px; width:100%; height:100%; border:none; margin:0; padding-top:0px; overflow:hidden;">
+        <iframe src="<?php echo '../dashboard/#/inicio/'.$menu->getUsuarioNombre()?>" frameborder="0" width="100%" height="100%" style="position:fixed; top:0px; left:0px; bottom:0px; right:0px; width:100%; height:100%; border:none; margin:0; padding-top:0px; overflow:hidden;">
             
         </iframe>
         
