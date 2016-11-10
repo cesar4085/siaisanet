@@ -2,11 +2,48 @@
 include_once(__DIR__ . '/Conexion.php');
 class ReporteModel {
     private $conn;
+    private $connPromo;
     public  function __construct() {
             $conexion=new Conexion();
             $this->conn=$conexion->getConexion();
+            $conexionPromo=new Conexion();
+            $this->connPromo=$conexionPromo->getConexionPromo();
      }
      
+private function reporteBase($nombre,$sql, $encabezados){
+        $query=$this->connPromo->prepare($sql);
+        $query->execute();
+        $fp = fopen('php://output', 'w');
+        header('Content-Type: text/csv');
+        header('Content-Disposition: attachment; filename="'.$nombre.'"');
+        fputcsv($fp, $encabezados);
+       while ($row = $query->fetch(PDO::FETCH_ASSOC)) {   
+               
+                fputcsv($fp, $row);
+           }
+           fclose($fp);
+    }
+     /*Reportes Chat*/
+
+          public function getReporteChatHoy(){
+          $nombre ="ReporteChatHoy.csv";
+          $sql="SELECT * FROM reporte_chat_hoy;";
+          $encabezados=['nombre_cliente','folio','email','tel_1','status','notas','agente','Procedencia','Fecha_inicio_chat'];
+          $this->reporteBase($nombre, $sql, $encabezados);
+     }
+          public function getReporteChatFiltro(){
+          $nombre ="ReporteChat.csv";
+          $sql="SELECT * FROM reporte_chat;";
+          $encabezados=['nombre_cliente','folio','email','tel_1','status','notas','agente','Procedencia','Fecha_inicio_chat'];
+          $this->reporteBase($nombre, $sql, $encabezados);
+     }
+          public function getReporteChatGeneral(){
+          $nombre ="ReporteChatGeneral.csv";
+          $sql="SELECT * FROM reporte_chat;";
+          $encabezados=['nombre_cliente','folio','email','tel_1','status','notas','agente','Procedencia','Fecha_inicio_chat'];
+          $this->reporteBase($nombre, $sql, $encabezados);
+     }
+     /*ReportesCitas*/
         
     public  function getReporteCitas(){
         

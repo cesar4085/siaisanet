@@ -203,8 +203,14 @@
                             <span class="menu-item">Chat</span>
                         </a>
                         <ul class="list-unstyled menu-item">
-                            <li><a href="../chat/">Registrar Chat</a></li>                            
-                            <li><a href="">Reporte General</a></li>                            
+                            <li><a href="../chat/">Registrar Chat</a></li>
+                            <li><a href="../chat/">Reportes</a><ul class="list-unstyled menu-item">
+                                                       
+                            <li><a href="../reporte.php?tipo=ReporteChatHoy">Reporte Hoy</a></li>                            
+                            <li><a href="../reporte.php?tipo=ReporteChatMes">Reporte Mes</a></li> 
+                            <li><a href="../reporte.php?tipo=ReporteChatFiltro">Reporte Filtro</a></li> 
+                            <li><a href="../reporte.php?tipo=ReporteChatGeneral">Reporte General</a></li> 
+                            </ul>
                         </ul>
                     </li>  
                     <li class="dropdown">
@@ -268,7 +274,7 @@
                         <div class="overflow" style="height: 254px">
                             <div class="media">
                                 <div class="pull-left">
-                                    <img width="40" src="img/profile-pics/1.jpg" alt="">
+                                    <img width="40" src="../img/profile-pics/1.jpg" alt="">
                                 </div>
                                 <div class="media-body">
                                     <small class="text-muted">Michael Jackson - 2 Hours ago</small><br>
@@ -277,7 +283,7 @@
                             </div>
                             <div class="media">
                                 <div class="pull-left">
-                                    <img width="40" src="img/profile-pics/2.jpg" alt="">
+                                    <img width="40" src="../img/profile-pics/2.jpg" alt="">
                                 </div>
                                 <div class="media-body">
                                     <small class="text-muted">Juan Gabriel - 5 Hours ago</small><br>
@@ -286,7 +292,7 @@
                             </div>
                             <div class="media">
                                 <div class="pull-left">
-                                    <img width="40" src="img/profile-pics/3.jpg" alt="">
+                                    <img width="40" src="../img/profile-pics/3.jpg" alt="">
                                 </div>
                                 <div class="media-body">
                                     <small class="text-muted">Alejandro cabazos - el 15/12/2013</small><br>
@@ -295,7 +301,7 @@
                             </div>
                             <div class="media">
                                 <div class="pull-left">
-                                    <img width="40" src="img/profile-pics/4.jpg" alt="">
+                                    <img width="40" src="../img/profile-pics/4.jpg" alt="">
                                 </div>
                                 <div class="media-body">
                                     <small class="text-muted">Sandy Sandoval - el 14/12/2013</small><br>
@@ -304,7 +310,7 @@
                             </div>
                             <div class="media">
                                 <div class="pull-left">
-                                    <img width="40" src="img/profile-pics/1.jpg" alt="">
+                                    <img width="40" src="../img/profile-pics/1.jpg" alt="">
                                 </div>
                                 <div class="media-body">
                                     <small class="text-muted">Susana diosdado- el 15/12/2013</small><br>
@@ -313,7 +319,7 @@
                             </div>
                             <div class="media">
                                 <div class="pull-left">
-                                    <img width="40" src="img/profile-pics/2.jpg" alt="">
+                                    <img width="40" src="../img/profile-pics/2.jpg" alt="">
                                 </div>
                                 <div class="media-body">
                                     <small class="text-muted">Felipe Calderon- el 16/12/2013</small><br>
@@ -322,7 +328,7 @@
                             </div>
                             <div class="media">
                                 <div class="pull-left">
-                                    <img width="40" src="img/profile-pics/3.jpg" alt="">
+                                    <img width="40" src="../img/profile-pics/3.jpg" alt="">
                                 </div>
                                 <div class="media-body">
                                     <small class="text-muted">Victor ORtiz - el 17/12/2013</small><br>
@@ -331,7 +337,7 @@
                             </div>
                             <div class="media">
                                 <div class="pull-left">
-                                    <img width="40" src="img/profile-pics/4.jpg" alt="">
+                                    <img width="40" src="../img/profile-pics/4.jpg" alt="">
                                 </div>
                                 <div class="media-body">
                                     <small class="text-muted">Sandy Sandoval - el 18/12/2013</small><br>
@@ -340,7 +346,7 @@
                             </div>
                             <div class="media">
                                 <div class="pull-left">
-                                    <img width="40" src="img/profile-pics/5.jpg" alt="">
+                                    <img width="40" src="../img/profile-pics/5.jpg" alt="">
                                 </div>
                                 <div class="media-body">
                                     <small class="text-muted">Susana Diosdado - el 19/12/2013</small><br>
@@ -364,7 +370,7 @@
                         <div class="overflow" style="height: 254px">
                             <div class="media">
                                 <div class="pull-left">
-                                    <img width="40" src="img/profile-pics/1.jpg" alt="">
+                                    <img width="40" src="../img/profile-pics/1.jpg" alt="">
                                 </div>
                                 <div class="media-body">
                                     <small class="text-muted">Michael Jackson - 2 Horas antes</small><br>
@@ -373,7 +379,7 @@
                             </div>
                             <div class="media">
                                 <div class="pull-left">
-                                    <img width="40" src="img/profile-pics/2.jpg" alt="">
+                                    <img width="40" src="../img/profile-pics/2.jpg" alt="">
                                 </div>
                                 <div class="media-body">
                                     <small class="text-muted">Felipe Calderon - 5 Horas antes</small><br>
@@ -382,7 +388,7 @@
                             </div>
                             <div class="media">
                                 <div class="pull-left">
-                                    <img width="40" src="img/profile-pics/3.jpg" alt="">
+                                    <img width="40" src="../img/profile-pics/3.jpg" alt="">
                                 </div>
                                 <div class="media-body">
                                     <small class="text-muted">Sandy Sandoval - El 15/12/2013</small><br>
@@ -391,7 +397,7 @@
                             </div>
                             <div class="media">
                                 <div class="pull-left">
-                                    <img width="40" src="img/profile-pics/4.jpg" alt="">
+                                    <img width="40" src="../img/profile-pics/4.jpg" alt="">
                                 </div>
                                 <div class="media-body">
                                     <small class="text-muted">Sandy Sandoval - El 14/12/2013</small><br>
@@ -400,7 +406,7 @@
                             </div>
                             <div class="media">
                                 <div class="pull-left">
-                                    <img width="40" src="img/profile-pics/1.jpg" alt="">
+                                    <img width="40" src="../img/profile-pics/1.jpg" alt="">
                                 </div>
                                 <div class="media-body">
                                     <small class="text-muted">Michael Jackson - El 15/12/2013</small><br>
@@ -409,7 +415,7 @@
                             </div>
                             <div class="media">
                                 <div class="pull-left">
-                                    <img width="40" src="img/profile-pics/2.jpg" alt="">
+                                    <img width="40" src="../img/profile-pics/2.jpg" alt="">
                                 </div>
                                 <div class="media-body">
                                     <small class="text-muted">Felipe Calderon - El 16/12/2013</small><br>
@@ -765,8 +771,8 @@
                                         <div class="tile quick-stats media">
                                             <div id="stats-line" class="pull-rigth"></div>
                                             <div class="media-body">
-                                                <h2 >{{info._total_chats}}</h2>
-                                                <small> {{info._total_chats}} Total Atendidos.</small>
+                                                <h2 >{{info._total_chats_hoy}}</h2>
+                                                <small> {{info._total_chats_hoy}} Total Atendidos Hoy.</small>
                                             </div>
                                         </div>
                                     </div>

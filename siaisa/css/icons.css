@@ -27,9 +27,9 @@
     height: 44px;
 }
 
-.sa-side-home { background-image: url(../img/icon/home.png); }
-.sa-side-typography { background-image: url(../img/icon/typography.png); }
-.sa-side-widget { background-image: url(../img/icon/widgets.png); }
+.sa-side-home { background-image: url(img/icon/home.png); }
+.sa-side-typography { background-image: url(img/icon/typography.png); }
+.sa-side-widget { background-image: url(img/icon/widgets.png); }
 .sa-side-table { background-image: url(../img/icon/table.png); }
 .sa-side-form { background-image: url(../img/icon/form.png); }
 .sa-side-ui { background-image: url(../img/icon/ui.png); }
